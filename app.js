@@ -11,6 +11,10 @@ const PORT = process.env.PORT || 8003;
 
 app.use(cors());
 app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.json("server started");
+});
 app.use(router);
 
 app.listen(PORT, () => {
